@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!--  Set up default values -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link the css style sheet to the html document -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Link the font from fonts.google.com that is used for the html document -->   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
+    <!-- Link icons from font awesome for social media logos used in the footer -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Insert logo in the browser tab before the title -->
+
+    <link rel="icon" href="../img/logo.png">
+
+    <!-- Define the title of the browser tab for the page -->
+    <title>Kriszta's - Portfolio page</title>
+</head>
+<body class="body">
+    <!-- Set up the header component of the page -->
+    <header class="header">
+        <div class="header-container">
+        <!-- create main menu component for desktop and tablet viewport -->
+        <nav id="main-menu">
+            <ul>
+              <li><a href="../index.html"><img class="logo" src="../img/logo.png" alt="logo"></a></li>
+              <li><a href="./about.html">About me</a></li>
+              <li><a href="./contact.html">Contact</a></li>
+              <li><a href="./blog.html">Blog</a></li>
+            </ul>
+          </nav>
+          
+          <!-- Create hamburger menu component for mobile viewport -->
+            <a href="../index.html"><img class="logo-mobile" src="../img/logo.png" alt="logo"></a>
+            <input type="checkbox" id="hamburger-input" class="burger-shower" >
+            <label  id="hamburger-menu" for="hamburger-input"  >
+            
+        <nav id="sidebar-menu">        
+                    <ul role="list" class="nav-list" id="navigation">
+                        <li><a class="about" href="./about.html">About me</a></li>
+                        <li><a class="contact" href="./contact.html">Contact</a></li>
+                        <li><a class="blog" href="./blog.html">Blog</a></li>
+                    </ul> 
+                </nav>
+            </label>
+            <div class="overlay"></div>    
+        </div>
+    </header>
+
+    <!-- Set up the main content of the blog page -->
+    <main class="main-blog">
+        <!-- Blog cards component -->
+        <section class="blog">
+            <article class="blog-card">
+                <a class="blog-title" href="./blog-posts.html#article1"><h1 >Will Minnie be cast in a Batman movie?</h1></a>
+                <time class="date" datetime="2022-11-02 8:43">Created: 02.11.2022 8:43am</time>
+                <p class="blog-overview"> Do my ears look similar enough to Batman's? </p>
+                <a href="./blog-posts.html#article1"><button class="blog-btn">Read more</button></a>
+            </article>
+            <article class="blog-card">
+                <a class="blog-title" href="./blog-posts.html#article2"><h1 >Greyhound sleeping positions 101</h1></a>
+                <time class="date" datetime="2022-11-02 8:43">Created: 02.11.2022 10:45am</time>
+                <p class="blog-overview"> Greyhounds are a very relaxed breed, so they love sleeping. </p>
+                <a href="./blog-posts.html#article2"><button class="blog-btn">Read more</button></a>
+            </article>
+            <article class="blog-card">
+                <a class="blog-title" href="./blog-posts.html#article3"><h1>I am a fashion icon in my pullover</h1></a>
+                <time class="date" datetime="2022-11-02 8:43">Created: 05.11.2022 8:20pm</time>
+                <p class="blog-overview"> This year stripes are the most chicest choice. </p>
+                <a href="./blog-posts.html#article3"><button class="blog-btn">Read more</button></a>
+            </article>
+            <article class="blog-card">
+                <a class="blog-title" href="./blog-posts.html#article4"><h1>Social life of a black greyhound</h1></a>
+                <time class="date" datetime="2022-11-02 8:43">Created: 06.11.2022 6:05pm</time>
+                <p class="blog-overview"> Every season I catch up with my friends to sniff around. </p>
+                <a href="./blog-posts.html#article4"><button class="blog-btn">Read more</button></a>
+            </article>
+            <article class="blog-card">
+                <a class="blog-title" href="./blog-posts.html#article5"><h1>Why do I love eating banana?</h1></a>
+                <time class="date" datetime="2022-11-02 8:43">Created: 07.11.2022 12:31pm</time>
+                <p class="blog-overview"> I think my love for banana is simple, it is as sweet as me. </p>
+                <a href="./blog-posts.html#article5"><button class="blog-btn">Read more</button></a>
+            </article>
+        </section>
+    </main>
+
+     <!-- Set up the footer component-->
+     <footer class="footer">
+        <!-- Social media icons component --> 
+        <section class="social-icons">
+            <ul>
+                <li class="icon-li">
+                    <a href="https://github.com" target="_blank"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>
+                </li>
+
+                <li class="icon-li">
+                    <a href="https://www.linkedin.com/in/ktesenyi" target="_blank"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+                    
+                </li>
+
+                <li class="icon-li">
+                    <a href="../index.html"><i class="fa fa-home fa-2x" aria-hidden="true"></i></a>
+                    
+                </li>
+
+                 <li class="icon-li">
+                    <a href="mailto:tesenyik@gmail.com"><i class="fa fa-envelope fa-2x" aria-hidden="true"></i></a>
+                </li>
+
+                <li class="icon-li">
+                    <a href="tel:0481555555"><i class="fa fa-phone fa-2x" aria-hidden="true"></i></a>
+                </li>
+
+            </ul>
+        </section>
+        <section class="foot-txt"><p>Caringly crafted by Kriszta &copy 2022 </p></section>
+        
+    </footer> 
+</body>
+</html>

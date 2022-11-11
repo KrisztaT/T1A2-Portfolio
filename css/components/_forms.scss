@@ -1,0 +1,8 @@
+@mixin form-box{
+    width: 90%;
+        box-sizing: border-box;
+        padding: 6px 16px;
+        background-color: $clr-background;
+        border: 2px solid $clr-form-border;
+        color: $clr-general-txt;
+}

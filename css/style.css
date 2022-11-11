@@ -1,0 +1,1095 @@
+/* Import partial files */ /* Reset css */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Allow percentage-based heights in the application*/
+html {
+  height: 100%;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Set up color variables for the web-page */ /* Set up font family variable */
+/* Set up font-weight used for styling of the web-page */
+/*  Set up font-sizes used for styling of the web-page */
+/* Mixins are define button styles to reuse it for all the buttons on the pages */ /* Mixins are define font styles to reuse it for all the fonts on the pages */
+/* mobile blog headline */
+/* --------------------------------------- Header settings of the web-pages --------------------------------------*/
+/* Header component styling, it is reused across all web pages */
+.header {
+  position: relative;
+  top: 0;
+  width: 100vw;
+  height: 105px;
+  border-bottom: 2px solid #1E1E1E;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .header-container {
+  width: 75vw;
+  /* Create an overlay to the sidebar menu, so when it slides out
+  it slide over the content.*/
+  /* mobile logo placement set up */
+  /* Hide checkbox which is used for the hamburger menu */
+  /*  main menu component for desktop view */
+}
+.header .header-container .overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s, visibility 0.35s, height 0.35s;
+  overflow: hidden;
+  background: #151515;
+  z-index: -1;
+}
+.header .header-container .logo-mobile {
+  margin: 20px 20px;
+  width: 100px;
+}
+.header .header-container #hamburger-input {
+  display: none;
+}
+.header .header-container #main-menu {
+  display: block;
+  height: 100px;
+  width: 100%;
+  margin: 0px;
+  z-index: 9;
+  /* Rotate logo with 360degree upon hovering using pseudo class, the transition is 3s */
+}
+.header .header-container #main-menu .logo {
+  width: 120px;
+}
+.header .header-container #main-menu ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  z-index: 9;
+}
+.header .header-container #main-menu ul li {
+  list-style-type: none;
+  font-size: 1.25rem;
+}
+.header .header-container #main-menu ul li a {
+  color: #aaaaaa;
+  font-size: 1.25rem;
+  text-decoration: none;
+}
+.header .header-container #main-menu ul li a:hover {
+  text-decoration: underline;
+  color: #02C9AF;
+  font-weight: 700;
+}
+
+/* Hamburger menu creating the 3 lines and styling*/
+#hamburger-menu {
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  display: none;
+  border: none;
+  padding: 0px;
+  margin: 0px;
+  background: linear-gradient(to bottom, #02C9AF, #151515 20%, #02C9AF 20%, #151515 40%, #02C9AF 40%, #151515 60%);
+}
+
+/* Hamburger menu component for mobile view */
+#hamburger-menu #sidebar-menu {
+  visibility: hidden;
+  position: fixed;
+  top: 30px;
+  right: -25px;
+  width: 200px;
+  height: 100%;
+  background-color: #151515;
+  transition: 0.3s;
+  padding: 0px 10px;
+  box-sizing: border-box;
+}
+#hamburger-menu #sidebar-menu ul {
+  padding-left: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#hamburger-menu #sidebar-menu ul li {
+  list-style-type: none;
+  line-height: 3rem;
+}
+#hamburger-menu #sidebar-menu ul li a {
+  color: #aaaaaa;
+  font-size: 1.25rem;
+  text-decoration: none;
+}
+
+/* Using pseudo class, if the checkbox is checked, then the sidebar is visible */
+#hamburger-input:checked + #hamburger-menu #sidebar-menu {
+  visibility: visible;
+  right: 0;
+  top: 64px;
+}
+
+/* Using pseudo class, if the checkbox is checked, then the overlay is visible */
+#hamburger-input:checked ~ .overlay {
+  visibility: visible;
+  opacity: 0.4;
+}
+
+/* --------------------------------------- Footer settings of the web-pages --------------------------------------*/
+/* Footer component styling for mobile*/
+.footer {
+  position: relative;
+  bottom: 0;
+  width: 100vw;
+  height: 100px;
+  margin-top: auto;
+  border-top: 2px solid #1E1E1E;
+}
+.footer .social-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 20px 0px;
+}
+.footer .social-icons .icon-li {
+  padding-right: 20px;
+  list-style: none;
+  opacity: 50;
+  overflow: hidden;
+  display: inline;
+  clear: both;
+  position: relative;
+  color: #aaaaaa;
+}
+.footer .social-icons .icon-li i {
+  color: #aaaaaa;
+}
+.footer .foot-txt {
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+/* Main content styling for index.html */
+.main-index {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 78vh;
+  /* lending page text say hi component */
+  /* Landing page name component using animation for text background */
+  /* landing page contact me button styled and animated to grab attention */
+}
+.main-index .text-zone {
+  text-align: center;
+  font-weight: 700;
+}
+.main-index p {
+  font-size: 1rem;
+}
+.main-index .name {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background-clip: text;
+  background: linear-gradient(-45deg, #02C9AF, #02C9AF, #FE00EC, #049CE4, #049CE4);
+  background-size: 200% auto;
+  -webkit-animation: bkg-anim 5s ease infinite;
+          animation: bkg-anim 5s ease infinite;
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.main-index .profession {
+  color: #049CE4;
+}
+.main-index .main-btn {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #02C9AF;
+  text-align: center;
+  width: 200px;
+  height: 50px;
+  border: 2px solid #02C9AF;
+  background: transparent;
+  margin: 20px 0;
+  -webkit-animation: shake 2s linear 3;
+          animation: shake 2s linear 3;
+  margin-top: 60px;
+}
+.main-index .main-btn:hover {
+  background-color: #02C9AF;
+  color: #151515;
+  border: 2px solid #151515;
+  font-weight: 700;
+}
+
+/* animation definition for Kriszta background*/
+@-webkit-keyframes bkg-anim {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes bkg-anim {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+/* Button animation for the landing and contact page */
+@-webkit-keyframes shake {
+  0%, 7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%, 100% {
+    transform: rotateZ(0);
+  }
+}
+@keyframes shake {
+  0%, 7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%, 100% {
+    transform: rotateZ(0);
+  }
+}
+/* Main content styling for about.html */
+.main-about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  /* Short introduction component with headline, picture, textual information and a resume button styled for mobile and tablet view */
+  /* vertical timeline component style for desktop view about education */
+  /*skill bar component style for mobile view */
+  /* hobby card component styling with animation */
+}
+.main-about .about-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 90%;
+}
+.main-about .about-left .headline {
+  color: #02C9AF;
+  font-size: 1.5rem;
+  padding: 10px 0;
+  text-align: center;
+}
+.main-about .about-left .me-photo {
+  padding: 40px 0;
+  width: 200px;
+}
+.main-about .about-left p {
+  font-size: 1rem;
+  text-align: justify;
+  margin: 20px 10px;
+  margin: 20px 20px;
+}
+.main-about .about-left .resume-btn {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #02C9AF;
+  text-align: center;
+  width: 200px;
+  height: 50px;
+  border: 2px solid #02C9AF;
+  background: transparent;
+  margin: 20px 0;
+}
+.main-about .about-left .resume-btn:hover {
+  background-color: #02C9AF;
+  color: #151515;
+  border: 2px solid #151515;
+  font-weight: 700;
+}
+.main-about .vertical-timeline {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  padding: 30px 5px 30px 10px;
+  width: 90%;
+  margin-top: 20px;
+}
+.main-about .vertical-timeline .timeline-title {
+  color: #02C9AF;
+  font-size: 1.5rem;
+  padding: 10px 0;
+  text-align: center;
+}
+.main-about .vertical-timeline .timeline {
+  border-left: 2px solid #049CE4;
+  padding: 20px 20px;
+}
+.main-about .vertical-timeline .timeline .li-school {
+  padding: 10px 10px;
+  position: relative;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.main-about .vertical-timeline .timeline .li-school:hover {
+  background-color: #1E1E1E;
+}
+.main-about .vertical-timeline .timeline .li-school::before {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: #049CE4;
+  border-radius: 50%;
+  left: -28px;
+  top: 15px;
+  transition: 0.5s;
+}
+.main-about .vertical-timeline .timeline .li-school:hover:before {
+  background-color: #FE00EC;
+  box-shadow: 0px 0px 10px 2px #FE00EC;
+}
+.main-about .vertical-timeline .timeline .li-school .date {
+  font-size: 1rem;
+  font-weight: 700;
+}
+.main-about .vertical-timeline .timeline .li-school .school {
+  color: #02C9AF;
+  font-size: 1.25rem;
+}
+.main-about .vertical-timeline .timeline .li-school .title {
+  color: #049CE4;
+}
+.main-about .vertical-timeline .timeline .li-school p {
+  font-size: 1rem;
+}
+.main-about .skill-bar {
+  width: 90%;
+  position: relative;
+  float: left;
+  margin-top: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  padding: 20px 10px 20px 10px;
+}
+.main-about .skill-bar .skill-title {
+  color: #02C9AF;
+  font-size: 1.5rem;
+  padding: 10px 0;
+  text-align: center;
+}
+.main-about .skill-bar .my-skills {
+  padding-top: 30px;
+}
+.main-about .skill-bar .my-skills > li {
+  margin-bottom: 50px;
+  background: #aaaaaa;
+  height: 6px;
+}
+.main-about .skill-bar .my-skills > li em {
+  font-size: 1rem;
+  position: relative;
+  top: -30px;
+}
+.main-about .skill-bar .my-skills > li span {
+  height: inherit;
+  background-color: #02C9AF;
+  background: linear-gradient(90deg, #02C9AF, #049CE4);
+  position: absolute;
+}
+.main-about .skill-bar .html5 {
+  width: 50%;
+}
+.main-about .skill-bar .css3 {
+  width: 45%;
+}
+.main-about .skill-bar .python {
+  width: 45%;
+}
+.main-about .skill-bar .js {
+  width: 50%;
+}
+.main-about .skill-bar .figma {
+  width: 45%;
+}
+.main-about .hobby-card {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  padding: 30px 10px 30px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.main-about .hobby-card .slider-title {
+  color: #02C9AF;
+  font-size: 1.5rem;
+  padding: 10px 0;
+  text-align: center;
+}
+.main-about .hobby-card .hobby-pics {
+  width: 20rem;
+  height: 20rem;
+  background-image: url(../img/lily.jpg);
+  background-position: center center;
+  border-radius: 50%;
+  box-shadow: 0 0 20 20px #02C9AF;
+  -webkit-animation: slider 15s linear infinite;
+          animation: slider 15s linear infinite;
+  margin: 20px 20px;
+}
+
+@-webkit-keyframes slider {
+  0% {
+    background: url(../img/lily.jpg);
+    background-size: cover;
+    background-position: center center;
+  }
+  25% {
+    background: url(../img/reading.png);
+    background-size: cover;
+    background-position: center center;
+  }
+  50% {
+    background: url(../img/sewing.png);
+    background-size: cover;
+    background-position: center center;
+  }
+  75% {
+    background: url(../img/friends.png);
+    background-size: cover;
+    background-position: center center;
+  }
+  100% {
+    background: url(../img/travel.png);
+    background-size: cover;
+    background-position: center center;
+  }
+}
+
+@keyframes slider {
+  0% {
+    background: url(../img/lily.jpg);
+    background-size: cover;
+    background-position: center center;
+  }
+  25% {
+    background: url(../img/reading.png);
+    background-size: cover;
+    background-position: center center;
+  }
+  50% {
+    background: url(../img/sewing.png);
+    background-size: cover;
+    background-position: center center;
+  }
+  75% {
+    background: url(../img/friends.png);
+    background-size: cover;
+    background-position: center center;
+  }
+  100% {
+    background: url(../img/travel.png);
+    background-size: cover;
+    background-position: center center;
+  }
+}
+/* Main content styling for contact.html */
+/* contact component with text and a form*/
+.main-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+  /* image component */
+}
+.main-contact .headline {
+  color: #02C9AF;
+  font-size: 1.5rem;
+  padding: 10px 0;
+  text-align: center;
+}
+.main-contact p {
+  font-size: 1rem;
+  text-align: justify;
+  margin: 20px 10px;
+}
+.main-contact .contact-form ul li {
+  margin: 20px 15px;
+  padding-right: 20px;
+  opacity: 50;
+  overflow: hidden;
+  clear: both;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.main-contact .contact-form ul li input[type=text] {
+  width: 90%;
+  box-sizing: border-box;
+  padding: 6px 16px;
+  background-color: #151515;
+  border: 2px solid #4A88C7;
+  color: #aaaaaa;
+}
+.main-contact .contact-form ul li input[type=email] {
+  width: 90%;
+  box-sizing: border-box;
+  padding: 6px 16px;
+  background-color: #151515;
+  border: 2px solid #4A88C7;
+  color: #aaaaaa;
+}
+.main-contact .contact-form ul li input[type=button] {
+  margin: 36px 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #02C9AF;
+  text-align: center;
+  width: 200px;
+  height: 50px;
+  border: 2px solid #02C9AF;
+  background: transparent;
+  margin: 20px 0;
+  -webkit-animation: shake 2s linear 3;
+          animation: shake 2s linear 3;
+}
+.main-contact .contact-form ul li input[type=button]:hover {
+  background-color: #02C9AF;
+  color: #151515;
+  border: 2px solid #151515;
+  font-weight: 700;
+}
+.main-contact .contact-form ul li #message {
+  height: 150px;
+  resize: none;
+  width: 90%;
+  box-sizing: border-box;
+  padding: 6px 16px;
+  background-color: #151515;
+  border: 2px solid #4A88C7;
+  color: #aaaaaa;
+}
+.main-contact .location {
+  max-width: 100%;
+  height: auto;
+  margin: 10px 5px;
+}
+.main-contact .figure {
+  position: relative;
+}
+
+/*  Main content styling for blog.html */
+.main-blog {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  /* Blog cards component styling */
+}
+.main-blog .blog {
+  width: 80vw;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.main-blog .blog .blog-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  border-top: 2px #049CE4 solid;
+  margin: 20px 0;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  padding: 30px 10px 30px 10px;
+  width: 300px;
+}
+.main-blog .blog .blog-card .blog-title {
+  color: #02C9AF;
+  font-size: 1.25rem;
+  padding: 10px 0;
+  text-align: center;
+  text-decoration: none;
+}
+.main-blog .blog .blog-card .blog-overview {
+  font-size: 1rem;
+  text-align: justify;
+  margin: 20px 10px;
+  margin: 50px 16px;
+}
+.main-blog .blog .blog-card .date {
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+.main-blog .blog .blog-card .blog-btn {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #02C9AF;
+  text-align: center;
+  width: 200px;
+  height: 50px;
+  border: 2px solid #02C9AF;
+  background: transparent;
+  margin: 20px 0;
+  margin: 20px 0;
+}
+
+/*  Main content styling for blog-posts.html */
+.main-blog-posts {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  /* blog posts component style for mobile and tablet view */
+}
+.main-blog-posts .blog-posts {
+  width: 80vw;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.main-blog-posts .blog-posts .blog-post {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  border-top: 2px #049CE4 solid;
+  margin: 20px 0;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  padding: 30px 10px 30px 10px;
+  flex-direction: column;
+}
+.main-blog-posts .blog-posts .blog-post .blog-title {
+  color: #02C9AF;
+  font-size: 1.25rem;
+  padding: 10px 0;
+  text-align: center;
+  text-decoration: none;
+}
+.main-blog-posts .blog-posts .blog-post .blog-img {
+  width: 60vW;
+  margin: 20px 10px;
+  border-radius: 20%;
+}
+.main-blog-posts .blog-posts .blog-post .blog-txt {
+  font-size: 1rem;
+  text-align: justify;
+  margin: 20px 10px;
+  margin: 50px 16px;
+}
+.main-blog-posts .blog-posts .blog-post .back-btn {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #02C9AF;
+  text-align: center;
+  width: 200px;
+  height: 50px;
+  border: 2px solid #02C9AF;
+  background: transparent;
+  margin: 20px 0;
+}
+
+/* --------------------------------------- General settings of the web-pages --------------------------------------*/
+.body {
+  /*Set all other pages general background, font and font color */
+  background-color: #151515;
+  font-family: "Open Sans", sans-serif;
+  color: #aaaaaa;
+  font-weight: 400;
+  /* Part of the set ups for the footer to stay at the bottom independent of the content */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --------------------------------------- Media queries for responsive web-pages --------------------------------------*/
+/* The first media query is for desktop view, this query contains the most styling as the page was
+creating with mobile first view */
+@media screen and (min-width: 1025px) {
+  /* In desktop view, the main difference is that the mobile logo and hamburger menu is hidden, text sizes
+  are also different  */
+  .header .header-container {
+    width: 75vw;
+  }
+  .header .header-container #main-menu ul li {
+    list-style-type: none;
+    font-size: 1.5rem;
+  }
+  .header .header-container #main-menu ul li a {
+    color: #aaaaaa;
+    font-size: 1.5rem;
+    text-decoration: none;
+  }
+  .header .header-container #main-menu ul li a:hover {
+    text-decoration: underline;
+    color: #02C9AF;
+    font-weight: 700;
+  }
+  .logo-mobile {
+    display: none;
+  }
+  /* -------------------------------------- index.html desktop view ---------------------------*/
+  .main-index {
+    /* lending page text say hi component, text sizes are bigger in desktop view */
+  }
+  .main-index .text-zone {
+    text-align: center;
+    font-weight: 700;
+  }
+  .main-index .main-line {
+    font-size: 2rem;
+  }
+  .main-index p {
+    font-size: 1.25rem;
+  }
+  .main-index .name {
+    color: #02C9AF;
+    font-size: 3.5rem;
+    font-weight: 700;
+  }
+  /* -------------------------------------- about.html desktop view ---------------------------*/
+  /* Main content styling for about.html */
+  .main-about {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /* Short introduction component with headline, picture, textual information and a resume button styled for desktop */
+    /* vertical timeline, skill bar and hobby card component style for desktop view about education 
+    here text size is purposefully the same size as in the mobile viw, I wanted to emphasise
+    that the main content is the short intro, where fonts are bigger for this reason*/
+  }
+  .main-about .about-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 60%;
+  }
+  .main-about .about-left .headline {
+    font-size: 2.5rem;
+    margin-top: 30px;
+  }
+  .main-about .about-left .me-photo {
+    width: 250px;
+    opacity: 0.9;
+  }
+  .main-about .about-left p {
+    font-size: 1.25rem;
+    text-align: justify;
+    margin: 20px 10px;
+  }
+  .main-about .about-left p .full-name {
+    color: #02C9AF;
+    font-size: 1.5rem;
+  }
+  .main-about .vertical-timeline {
+    width: 30%;
+  }
+  .main-about .skill-bar {
+    width: 60%;
+  }
+  .main-about .hobby-card {
+    width: 30%;
+  }
+  /* -------------------------------------- contact.html desktop view ---------------------------*/
+  /* Main content styling for contact.html mainly display and font sizes are different */
+  .main-contact {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+  }
+  .main-contact .message-zone {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    width: 50%;
+  }
+  .main-contact .message-zone .headline {
+    font-size: 2.5rem;
+  }
+  .main-contact .message-zone p {
+    font-size: 1.25rem;
+    text-align: justify;
+    margin: 20px 10px;
+  }
+  .main-contact .location {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: 10px 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    padding: 30px 10px 30px 10px;
+  }
+  /* -------------------------------------- blog.html desktop view ---------------------------*/
+  .main-blog {
+    /*  Blog cards component style for desktop view */
+  }
+  .main-blog .blog {
+    width: 80vw;
+  }
+  .main-blog .blog .blog-card {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    border-top: 2px #049CE4 solid;
+    margin: 20px 0;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    padding: 30px 10px 30px 10px;
+    width: 350px;
+  }
+  .main-blog .blog .blog-card:hover {
+    transform: scale(1.15, 1.15);
+    transition: 2s;
+    background-color: #1E1E1E;
+    border-top: 2px solid #FE00EC;
+  }
+  .main-blog .blog .blog-card .blog-title {
+    color: #02C9AF;
+    font-size: 1.5rem;
+    padding: 10px 0;
+    text-align: center;
+    text-decoration: none;
+  }
+  .main-blog .blog .blog-card .blog-overview {
+    font-size: 1.25rem;
+    text-align: justify;
+    margin: 20px 10px;
+    margin: 50px 16px;
+  }
+  .main-blog .blog .blog-card .date {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+  .main-blog .blog .blog-card .blog-btn:hover {
+    background-color: #02C9AF;
+    color: #151515;
+    border: 2px solid #151515;
+    font-weight: 700;
+  }
+  /* -------------------------------------- blog-posts.html desktop view ---------------------------*/
+  .main-blog-posts {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    /* blog posts component style different font, card, img size and button hover */
+  }
+  .main-blog-posts .blog-posts {
+    width: 60vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .main-blog-posts .blog-posts .blog-post {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    border-top: 2px #049CE4 solid;
+    margin: 20px 0;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    padding: 30px 10px 30px 10px;
+    flex-direction: column;
+  }
+  .main-blog-posts .blog-posts .blog-post .blog-title {
+    color: #02C9AF;
+    font-size: 1.5rem;
+    padding: 10px 0;
+    text-align: center;
+    text-decoration: none;
+  }
+  .main-blog-posts .blog-posts .blog-post .blog-img {
+    width: 250px;
+    margin: 20px 10px;
+    border-radius: 20%;
+  }
+  .main-blog-posts .blog-posts .blog-post .blog-txt {
+    font-size: 1.25rem;
+    text-align: justify;
+    margin: 20px 10px;
+    margin: 50px 16px;
+  }
+  .main-blog-posts .blog-posts .blog-post .back-btn {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #02C9AF;
+    text-align: center;
+    width: 200px;
+    height: 50px;
+    border: 2px solid #02C9AF;
+    background: transparent;
+    margin: 20px 0;
+  }
+  .main-blog-posts .blog-posts .blog-post .back-btn:hover {
+    background-color: #02C9AF;
+    color: #151515;
+    border: 2px solid #151515;
+    font-weight: 700;
+  }
+  /* -------------------------------------- footer desktop view ---------------------------*/
+  /* footer component desktop view the text and the icons at the opposite end of the footer */
+  .footer {
+    position: relative;
+    bottom: 0;
+    width: 100vw;
+    height: 100px;
+    margin-top: auto;
+    border-top: 2px solid #1E1E1E;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+    color: #aaaaaa;
+  }
+  .footer .social-icons .icon-li i {
+    color: #aaaaaa;
+  }
+  .footer .social-icons .icon-li i:hover {
+    color: #02C9AF;
+  }
+  .footer .foot-txt {
+    text-align: left;
+  }
+}
+/* The second media query is for tablet view, this query contains hidden mobile logo
+and the view of the desktop footer, everything else is the same as on mobile */
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+  .logo-mobile {
+    display: none;
+  }
+  /* -------------------------------------- footer tablet view ---------------------------*/
+  /*footer component tablet view */
+  .footer {
+    position: relative;
+    bottom: 0;
+    width: 100vw;
+    height: 100px;
+    margin-top: auto;
+    border-top: 2px solid #1E1E1E;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+    color: #aaaaaa;
+  }
+  .footer .foot-txt {
+    text-align: left;
+  }
+}
+/* The last media query is for if the viewport width size is under 450px (smaller than mobile phone pixel width
+the main menu is not displayed, but the hamburger menu is. */
+@media screen and (max-width: 480px) {
+  .header .header-container #main-menu {
+    display: none;
+  }
+  #hamburger-menu {
+    display: inline;
+  }
+}/*# sourceMappingURL=style.css.map */

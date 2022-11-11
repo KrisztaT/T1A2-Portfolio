@@ -1,0 +1,39 @@
+/* --------------------------------------- Footer settings of the web-pages --------------------------------------*/
+
+/* Footer component styling for mobile*/
+.footer{
+    position:relative;
+    bottom:0;
+    width:100vw;
+    height: 100px; 
+    margin-top: auto;
+    border-top: 2px solid $clr-cards;
+ 
+    .social-icons {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      margin: 20px 0px;
+       
+      .icon-li{
+        padding-right: 20px;
+        list-style: none;
+        opacity: 50;
+        overflow: hidden;
+        display: inline;
+        clear: both;
+        position: relative;
+        color: $clr-general-txt;
+ 
+        i {
+          color: $clr-general-txt;
+        }
+      }
+    }
+ 
+     .foot-txt {
+       text-align: center;
+       font-size: $fs-m-nav;
+     }
+}

@@ -1,0 +1,86 @@
+/* Main content styling for index.html */
+.main-index{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 78vh;
+
+    /* lending page text say hi component */
+    .text-zone{
+      text-align: center;
+      font-weight: $fw-bold;
+      }
+        p{
+          font-size: $fs-m-reg; 
+        }
+
+    /* Landing page name component using animation for text background */
+    .name{
+      font-size: $fs-m-name;
+      font-weight: $fw-bold;
+      background-clip: text;
+      background: linear-gradient(-45deg, $clr-accent-1, $clr-accent-1, $clr-accent-3, $clr-accent-2, $clr-accent-2 );
+      background-size: 200% auto;
+      animation: bkg-anim 5s ease infinite;
+      background-clip: text;
+      color: transparent;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }  
+
+    .profession{
+      color:$clr-accent-2;
+    }
+
+    /* landing page contact me button styled and animated to grab attention */
+    .main-btn{
+        @include buttons();
+        animation: shake 2s linear 3;
+        margin-top: 60px;
+        
+        &:hover{
+          @include button-hover();
+        }
+    }
+}
+
+  /* animation definition for Kriszta background*/ 
+  @keyframes bkg-anim{
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    } 
+  }
+  
+  /* Button animation for the landing and contact page */
+  @keyframes shake{
+    0%, 7% {
+      transform: rotateZ(0);
+    }
+    15% {
+      transform: rotateZ(-15deg);
+    }
+    20% {
+      transform: rotateZ(10deg);
+    }
+    25% {
+      transform: rotateZ(-10deg);
+    }
+    30% {
+      transform: rotateZ(6deg);
+    }
+    35% {
+      transform: rotateZ(-4deg);
+    }
+    40%, 100% {
+      transform: rotateZ(0);
+    }
+  }
+  

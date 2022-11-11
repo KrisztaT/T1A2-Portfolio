@@ -1,0 +1,41 @@
+/*  Main content styling for blog.html */
+.main-blog{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  
+    /* Blog cards component styling */
+    .blog{
+      width: 80vw;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+       
+        .blog-card {
+          @include card();
+          width: 300px;
+  
+         .blog-title{
+            @include m-blog-hl();
+          }
+  
+          .blog-overview{
+            @include m-reg-txt();
+            margin: 50px 16px;
+          }
+            
+          .date{
+            font-size: $fs-blog-date;
+            font-weight: $fw-bold;
+          }
+  
+          .blog-btn{
+            @include buttons();
+            margin: 20px 0;
+          }
+        }
+    }
+}

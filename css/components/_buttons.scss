@@ -1,0 +1,21 @@
+/* Mixins are define button styles to reuse it for all the buttons on the pages */
+
+@mixin buttons {
+  font-size: $fs-m-button;
+  font-weight: $fw-bold;
+  color: $clr-accent-1;
+  text-align: center;
+  width: 200px;
+  height: 50px;
+  border: 2px solid $clr-accent-1;
+  background: transparent;
+  margin: 20px 0;
+}
+
+
+@mixin button-hover {
+  background-color: $clr-accent-1;
+  color: $clr-background;
+  border: 2px solid $clr-background;
+  font-weight: $fw-bold;
+}

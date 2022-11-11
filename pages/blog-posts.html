@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!--  Set up default values -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link the css style sheet to the html document -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Link the font from fonts.google.com that is used for the html document -->   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
+    <!-- Link icons from font awesome for social media logos used in the footer -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Insert logo in the browser tab before the title -->
+
+    <link rel="icon" href="../img/logo.png">
+
+    <!-- Define the title of the browser tab for the page -->
+    <title>Kriszta's - Portfolio page</title>
+</head>
+<body class="body">
+    <!-- Set up the header component of the page -->
+    <header class="header">
+        <div class="header-container">
+        <!-- create main menu component for desktop and tablet viewport -->
+        <nav id="main-menu">
+            <ul>
+              <li><a href="../index.html"><img class="logo" src="../img/logo.png" alt="logo"></a></li>
+              <li><a href="./about.html">About me</a></li>
+              <li><a href="./contact.html">Contact</a></li>
+              <li><a href="./blog.html">Blog</a></li>
+            </ul>
+          </nav>
+          
+          <!-- Create hamburger menu component for mobile viewport -->
+            <a href="../index.html"><img class="logo-mobile" src="../img/logo.png" alt="logo"></a>
+            <input type="checkbox" id="hamburger-input" class="burger-shower" >
+            <label  id="hamburger-menu" for="hamburger-input"  >
+            
+        <nav id="sidebar-menu">        
+                    <ul role="list" class="nav-list" id="navigation">
+                        <li><a class="about" href="./about.html">About me</a></li>
+                        <li><a class="contact" href="./contact.html">Contact</a></li>
+                        <li><a class="blog" href="./blog.html">Blog</a></li>
+                    </ul> 
+                </nav>
+            </label>
+            <div class="overlay"></div>    
+        </div>
+    </header>
+
+    <!-- Set up the main content of the blog page -->
+    <main class="main-blog-posts">
+        <!-- blog posts component -->
+        <section class="blog-posts">
+
+            <article id="article1" class="blog-post">
+                <h2 class="blog-title">Will Minnie be cast in a Batman movie?</h2>
+                <time class="date" datetime="2022-11-02 8:43">Created: 02.11.2022 8:43am</time>
+                <img class="blog-img" src="../img/minnie.png" alt="Minnie">
+                <p class="blog-txt"> Do my ears look similar enough to Batman's?
+                    <br> Nowadays, I am thinking a lot about being a dog actress. I especially enjoy watching movies
+                    such as Rex, Hachi: A dog's tale, or the Dog's purpose. While I know being an actress requires hard to focus, strength, commitment
+                    and persistence, I know I would be able to do that. Just think about it, I was trained to be an athlete all my life, I know hard
+                    work. I am also exceptionally smart, sometimes I outsmart my owners and when they are outside, I slip onto the couch. They never know it,
+                    or at least they never scold me for it. Anyhow, I still try to keep my shape, and look at those ears, I could be Batman's double. You can not
+                    deny the resemblance.
+                </p>
+                <a href="./blog.html"><button class="back-btn">&#8592; Back to blog</button></a>
+            </article>
+
+            <article id="article2" class="blog-post">
+                <h2 class="blog-title">Greyhound sleeping positions 101</h2>
+                <time class="date" datetime="2022-11-02 8:43">Created: 02.11.2022 10:45am</time>
+                <img class="blog-img" src="../img/minnie-sleep.png" alt="Minnie sleeping" style="width:600px">
+                <p class="blog-txt">Greyhounds are a very relaxed breed, which means we are good at sleeping. 
+                    We can sleep for 20 hours a day and will often nap during the day as well. I also love
+                    to be close to my humans, when I was younger I spent some time in a different room, but now I am always with them.
+                    My only real issue is that they do not let me sleep in their bed despite how small I am. I also sleep like a log, never kicking or rotating like a ventilator.
+                    All right, sometimes I sleep in weird positions with my legs in a pretzel or roaching on my back with straight legs in the air. Sometimes I have bed fails, sleeping close to my beds
+                    or my head might touch the brink of the bed. This exercise is extremely important so I can value my comfy bed more when I sleep in it. But look at me how cute I am, you would let me sleep in your bed, right?
+                </p>
+                <a href="./blog.html"><button class="back-btn">&#8592; Back to blog</button></a>
+            </article>
+
+            <article id="article3" class="blog-post">
+                <h2 class="blog-title">I am a fashion icon in my pullover</h2>
+                <time class="date" datetime="2022-11-02 8:43">Created: 05.11.2022 8:20pm</time>
+                <img class="blog-img" src="../img/minnie-yoga.png" alt="Minnie Yoga">
+                <p class="blog-txt"> This year stripes are the most chicest choice.
+                    <br> Why do I need clothes, you ask? Unfortunately, the cold badly affects Greyhounds.
+                    As a result of my low body fat and short single-layer coat, I have a hard time retaining heat. It is common for Greys, Whippets, and Italian Greyhounds to shake during the cooler months because this is how we warm up our muscles.
+                    That is also how I wake up my owners, but at times I also scream to their faces to let them know I am cold at night time.
+                    Additionally, I dislike rain, I do not want to go outside. But my owners make me, so I need an extra layer of clothes to go for a walk in that nasty weather.
+                    So, if you are planning to walk your sighthound in the rain, you will need a waterproof coat or onesie. Swimming, puddles, and rain are always a no-no for us though.
+                </p>
+                <a href="./blog.html"><button class="back-btn">&#8592; Back to blog</button></a>
+            </article>
+
+            <article id="article4" class="blog-post">
+                <h2 class="blog-title">Social life of a black greyhound</h2>
+                <time class="date" datetime="2022-11-02 8:43">Created: 06.11.2022 6:05pm</time>
+                <img class="blog-img" src="../img/minnie-friends.png" alt="Minnie with friends">
+                <p class="blog-txt"> Every season I catch up with my friends to sniff around.
+                   <br> Socializing is important to expose and allow dogs like me to experience all aspects of greyhound life, including people, places, dogs.
+                   So I regularly catch up with my friends to have a sniff party and share our experiences. 
+                   You know, I tell them that when I was a small pup, I lived with a lot of other grey pups, but we lived in a small cage. My early education was extremely hard on me and my body, I ran a lot and I still don't know how to play like other dogs.
+                   To be honest, while I like being around other greys, I am a bit too bossy and strong headed. But I always let them to follow my lead. Every time I am at my pet sitter's house I over dominate her dogs in their own home.
+                    But hey, I am 7 years old, I do not think I'll change now. And the best part is, that my humans love me this way. 
+                </p>
+                <a href="./blog.html"><button class="back-btn">&#8592; Back to blog</button></a>
+            </article>
+
+            <article id="article5" class="blog-post">
+                <h2 class="blog-title">Why do I love eating banana?</h2>
+                <time class="date" datetime="2022-11-02 8:43">Created: 07.11.2022 12:31pm</time>
+                <img class="blog-img" src="../img/minnie-banana.png" alt="Minnie eats banana">
+                <p class="blog-txt">I think my love for banana is simple, it is as sweet as me.
+                   <br> Like all dogs, I also enjoy it when my owners give me treats. And while banana does not seem
+                   as an obvious choice, but it is for me as for example a good chocolate cake for humans.
+                   Bananas are sweet and dogs like me love sweeties. And not just that it has many health benefits
+                   such as it contains a lot of healthy minerals and vitamins. Have you looked at my fur? It is extremely
+                   shiny...banana is one of the reasons. However, my humans give me a small portion of banana just as a treat, to keep
+                   me healthy and avoid negative side effects. But to be honest, I could always eat more.
+                </p>
+                <a href="./blog.html"><button class="back-btn">&#8592; Back to blog</button></a>
+            </article>
+
+        </section>
+    </main>
+
+    <!-- Set up the footer component-->
+    <footer class="footer">
+        <!-- Social media icons component --> 
+        <section class="social-icons">
+            <ul>
+                <li class="icon-li">
+                    <a href="https://github.com" target="_blank"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>
+                </li>
+
+                <li class="icon-li">
+                    <a href="https://www.linkedin.com/in/ktesenyi" target="_blank"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+                    
+                </li>
+
+                <li class="icon-li">
+                    <a href="../index.html"><i class="fa fa-home fa-2x" aria-hidden="true"></i></a>
+                    
+                </li>
+
+                 <li class="icon-li">
+                    <a href="mailto:tesenyik@gmail.com"><i class="fa fa-envelope fa-2x" aria-hidden="true"></i></a>
+                </li>
+
+                <li class="icon-li">
+                    <a href="tel:0481555555"><i class="fa fa-phone fa-2x" aria-hidden="true"></i></a>
+                </li>
+
+            </ul>
+        </section>
+        <section class="foot-txt"><p>Caringly crafted by Kriszta &copy 2022 </p></section>
+        
+    </footer> 
+</body>
+</html>

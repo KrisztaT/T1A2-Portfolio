@@ -1,0 +1,348 @@
+/* Import partial files */
+@import './default/default';
+@import './components/buttons';
+@import './components/text-format';
+@import './components/cards';
+@import './components/forms';
+@import './components/header';
+@import './components/footer';
+@import './components/index';
+@import './components/about';
+@import './components/contact';
+@import './components/blog';
+@import './components/blog-posts';
+ 
+/* --------------------------------------- General settings of the web-pages --------------------------------------*/
+
+.body {
+  /*Set all other pages general background, font and font color */
+  background-color: $clr-background;
+  font-family: $ff;
+  color: $clr-general-txt;
+  font-weight: $fw-regular;
+
+  /* Part of the set ups for the footer to stay at the bottom independent of the content */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+} 
+ 
+
+/* --------------------------------------- Media queries for responsive web-pages --------------------------------------*/
+/* The first media query is for desktop view, this query contains the most styling as the page was
+creating with mobile first view */
+
+@media screen and (min-width: 1025px){
+  /* In desktop view, the main difference is that the mobile logo and hamburger menu is hidden, text sizes
+  are also different  */
+  .header{
+    .header-container{
+        width: 75vw;
+
+      #main-menu {
+         
+        ul {
+          
+          li {  
+            list-style-type: none;
+            font-size: $fs-dt-nav;
+  
+            a {
+              color: $clr-general-txt;
+              font-size: $fs-dt-nav;
+              text-decoration: none;
+  
+              &:hover{
+                text-decoration: underline;
+                color: $clr-accent-1;
+                font-weight: $fw-bold;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .logo-mobile{
+    display: none;
+  }
+
+/* -------------------------------------- index.html desktop view ---------------------------*/  
+  .main-index{
+      /* lending page text say hi component, text sizes are bigger in desktop view */  
+      .text-zone{
+        text-align: center;
+        font-weight: $fw-bold;
+      }
+
+      .main-line{
+        font-size: $fs-dt-welcome;
+      }
+
+      p{    
+        font-size: $fs-dt-reg; 
+      }
+
+      .name {
+        color: $clr-accent-1;
+        font-size: $fs-dt-name;
+        font-weight: $fw-bold;
+      }  
+  }
+
+/* -------------------------------------- about.html desktop view ---------------------------*/  
+/* Main content styling for about.html */
+  .main-about{
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      
+      /* Short introduction component with headline, picture, textual information and a resume button styled for desktop */
+      .about-left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 60%;
+
+        .headline{
+          font-size: $fs-dt-headline;
+          margin-top: 30px;
+        }
+
+        .me-photo{
+          width: 250px;
+          opacity: 0.9;
+        }
+        
+      p{
+          @include dt-reg-txt();
+
+          .full-name{
+            color: $clr-accent-1;
+            font-size: $fs-dt-nav;
+          }
+      }
+    }
+
+    /* vertical timeline, skill bar and hobby card component style for desktop view about education 
+    here text size is purposefully the same size as in the mobile viw, I wanted to emphasise
+    that the main content is the short intro, where fonts are bigger for this reason*/
+    .vertical-timeline{
+      width: 30%;
+    }
+      .skill-bar{
+        width:60%;
+      }
+      .hobby-card{
+        width: 30%;
+      }
+
+  }
+
+  /* -------------------------------------- contact.html desktop view ---------------------------*/  
+  /* Main content styling for contact.html mainly display and font sizes are different */
+  .main-contact{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-content: center;
+      
+      .message-zone{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        width: 50%;
+       
+        .headline{
+          font-size: $fs-dt-headline;
+        }
+    
+        p{
+          @include dt-reg-txt();
+        }
+      }
+    
+      .location{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        margin: 10px 20px;
+        box-shadow:0px 0px 10px rgba(0, 0, 0, 0.5);
+        padding:30px 10px 30px 10px;
+        
+      } 
+  }
+
+
+  /* -------------------------------------- blog.html desktop view ---------------------------*/  
+  .main-blog{
+   /*  Blog cards component style for desktop view */
+    .blog{
+      width: 80vw;
+             
+      .blog-card {
+        @include card();
+        width: 350px;
+    
+        &:hover{
+          transform: scale(1.15,1.15);
+          transition: 2s;
+          background-color: $clr-cards;
+          border-top: 2px solid $clr-accent-3;
+        }
+  
+        .blog-title{
+          @include dt-blog-hl();
+        }
+  
+        .blog-overview{
+          @include dt-reg-txt();
+          margin: 50px 16px;
+        }
+            
+        .date{
+          font-size: $fs-dt-blog-date;
+          font-weight: $fw-bold;
+        }
+
+        .blog-btn{
+         
+          &:hover{
+            @include button-hover();
+          }
+        }
+      }
+    }
+  }
+
+  /* -------------------------------------- blog-posts.html desktop view ---------------------------*/  
+  .main-blog-posts {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+  
+     /* blog posts component style different font, card, img size and button hover */
+    .blog-posts {
+      width: 60vw;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+  
+      .blog-post {
+        @include card();
+        flex-direction: column;
+
+        .blog-title {
+          @include dt-blog-hl();
+        }
+  
+        .blog-img {
+          width: 250px;
+          margin: 20px 10px;
+          border-radius: 20%
+        }
+  
+        .blog-txt {
+          @include dt-reg-txt();
+          margin: 50px 16px;
+        }
+  
+        .back-btn{
+           @include buttons();
+  
+            &:hover{
+              @include button-hover();
+            }
+        }
+      }
+    }
+  }
+  
+  /* -------------------------------------- footer desktop view ---------------------------*/  
+  /* footer component desktop view the text and the icons at the opposite end of the footer */
+  .footer {
+    position:relative;
+    bottom:0;
+    width:100vw;
+    height: 100px; 
+    margin-top: auto;
+    border-top: 2px solid $clr-cards;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center; 
+    color: $clr-general-txt;
+
+    .social-icons {
+             
+      .icon-li{
+        
+        i {
+        color: $clr-general-txt;
+     
+          &:hover{
+            color: $clr-accent-1;
+          }
+        }
+      }
+    }  
+    .foot-txt{
+      text-align: left;
+    }
+  }
+}
+
+/* The second media query is for tablet view, this query contains hidden mobile logo
+and the view of the desktop footer, everything else is the same as on mobile */
+
+
+@media screen and (min-width: 481px) and (max-width: 1024px){
+  .logo-mobile {
+    display: none;
+  }
+
+  /* -------------------------------------- footer tablet view ---------------------------*/  
+  /*footer component tablet view */
+  .footer {
+    position:relative;
+    bottom:0;
+    width:100vw;
+    height: 100px; 
+    margin-top: auto;
+    border-top: 2px solid $clr-cards;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center; 
+    color: $clr-general-txt;
+
+    .foot-txt{
+      text-align: left;
+    }
+  }
+}
+
+
+/* The last media query is for if the viewport width size is under 450px (smaller than mobile phone pixel width
+the main menu is not displayed, but the hamburger menu is. */
+@media screen and (max-width: 480px) {
+  .header {
+    .header-container{
+      #main-menu {
+      display: none;
+      }
+    }
+  }
+    #hamburger-menu {
+      display: inline;
+    }
+}

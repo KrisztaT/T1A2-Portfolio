@@ -1,0 +1,48 @@
+/* Mixins are define font styles to reuse it for all the fonts on the pages */
+
+@mixin m_headline {
+    color: $clr-accent-1;
+    font-size: $fs-m-headline;
+    padding: 10px 0;
+    text-align: center;
+    
+}
+
+@mixin dt_headline {
+    color: $clr-accent-1;
+    font-size: $fs-dt-headline;
+    padding: 10px 0;
+    text-align: center;
+    
+}
+
+@mixin m-reg-txt{
+    font-size: $fs-m-reg;
+    text-align: justify;
+    margin: 20px 10px;
+}
+
+@mixin dt-reg-txt{
+    font-size: $fs-dt-reg;
+    text-align: justify;
+    margin: 20px 10px;
+}
+
+/* mobile blog headline */
+@mixin m-blog-hl {
+    color: $clr-accent-1;
+    font-size: $fs-m-blog-title;
+    padding: 10px 0;
+    text-align: center;
+    text-decoration: none;
+    
+}
+
+@mixin dt-blog-hl {
+    color: $clr-accent-1;
+    font-size: $fs-dt-blog-title;
+    padding: 10px 0;
+    text-align: center;
+    text-decoration: none;
+    
+}

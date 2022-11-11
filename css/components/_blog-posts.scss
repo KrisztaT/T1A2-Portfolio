@@ -1,0 +1,40 @@
+/*  Main content styling for blog-posts.html */
+.main-blog-posts {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  
+  /* blog posts component style for mobile and tablet view */
+  .blog-posts {
+    width: 80vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  
+          .blog-post {
+            @include card();
+            flex-direction: column;
+  
+            .blog-title {
+              @include m-blog-hl();
+            }
+  
+            .blog-img {
+              width: 60vW;
+              margin: 20px 10px;
+              border-radius: 20%
+            }
+  
+            .blog-txt {
+              @include m-reg-txt();
+              margin: 50px 16px;
+            }
+  
+            .back-btn{
+              @include buttons();
+            }
+          }
+      }
+  }

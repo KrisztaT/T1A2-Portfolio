@@ -1,0 +1,64 @@
+/* Main content styling for contact.html */
+/* contact component with text and a form*/
+.main-contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+  
+    .headline{
+        @include m_headline();
+    }
+  
+    p{
+      @include m-reg-txt();
+    }
+  
+    .contact-form ul li{
+      margin: 20px 15px;
+      padding-right: 20px;
+      opacity: 50;
+      overflow: hidden;
+      clear: both;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      
+        input[type=text]{
+          @include form-box();
+        }
+        
+        input[type=email]{
+          @include form-box();
+        }
+        
+        input[type=button]{
+          margin: 36px 0;
+          @include buttons(); 
+          animation: shake 2s linear 3;
+        }
+        
+        input[type=button]:hover{
+          @include button-hover();
+        }
+        
+        #message{
+          height: 150px;
+          resize: none;
+          @include form-box();
+        }
+      }
+  
+      /* image component */
+      .location{
+        max-width: 100%;
+        height: auto;
+        margin: 10px 5px;
+      }
+      
+      .figure{
+        position: relative;
+      }
+}
+  

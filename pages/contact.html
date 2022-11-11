@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!--  Set up default values -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link the css style sheet to the html document -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Link the font from fonts.google.com that is used for the html document -->   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
+    <!-- Link icons from font awesome for social media logos used in the footer -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Insert logo in the browser tab before the title -->
+
+    <link rel="icon" href="../img/logo.png">
+
+    <!-- Define the title of the browser tab for the page -->
+    <title>Kriszta's - Portfolio page</title>
+</head>
+<body class="body">
+    <!-- Set up the header component of the page -->
+    <header class="header">
+        <div class="header-container">
+        <!-- create main menu component for desktop and tablet viewport -->
+        <nav id="main-menu">
+            <ul>
+              <li><a href="../index.html"><img class="logo" src="../img/logo.png" alt="logo"></a></li>
+              <li><a href="./about.html">About me</a></li>
+              <li><a href="./contact.html">Contact</a></li>
+              <li><a href="./blog.html">Blog</a></li>
+            </ul>
+          </nav>
+          
+          <!-- Create hamburger menu component for mobile viewport -->
+            <a href="../index.html"><img class="logo-mobile" src="../img/logo.png" alt="logo"></a>
+            <input type="checkbox" id="hamburger-input" class="burger-shower" >
+            <label  id="hamburger-menu" for="hamburger-input"  >
+            
+        <nav id="sidebar-menu">        
+                    <ul role="list" class="nav-list" id="navigation">
+                        <li><a class="about" href="./about.html">About me</a></li>
+                        <li><a class="contact" href="./contact.html">Contact</a></li>
+                        <li><a class="blog" href="./blog.html">Blog</a></li>
+                    </ul> 
+                </nav>
+            </label>
+            <div class="overlay"></div>    
+        </div>
+    </header>
+
+    <!-- Set up the main content of the contact page contact form-->
+    <main class="main-contact">
+        <!-- Message zone component for contact form -->
+        <div class="message-zone">
+            <h2 class="headline"> Contact me!</h2>
+            <p>Is there a website you dream of creating?
+                To make it happen, feel free to contact me.</p>
+             <!-- Contact form component-->
+            <form action="/" method="get" class="contact-form">
+                <ul role="list">
+                    <li><input type="text" name="name" id="" placeholder="Name"></li>
+                    <li><input type="email" name="email" id="" placeholder="Email"></li>
+                    <li><input type="text" name="subject" id="" placeholder="Subject"></li>
+                    <li><input type="text" name="message" id="message" placeholder="Message"></li>
+                    <li> <input type="button" value= "Send" ></li>               
+                </ul>
+            </form>
+         </div>
+        <figure class="'loc-img">
+            <img class="location" src="../img/location-img.png" alt="location">  
+        </figure>
+    </main>
+
+     <!-- Set up the footer component-->
+     <footer class="footer">
+        <!-- Social media icons component --> 
+        <section class="social-icons">
+            <ul>
+                <li class="icon-li">
+                    <a href="https://github.com" target="_blank"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>
+                </li>
+
+                <li class="icon-li">
+                    <a href="https://linkedin.com" target="_blank"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+                    
+                </li>
+
+                <li class="icon-li">
+                    <a href="https://www.linkedin.com/in/ktesenyi"><i class="fa fa-home fa-2x" aria-hidden="true"></i></a>
+                    
+                </li>
+
+                 <li class="icon-li">
+                    <a href="mailto:tesenyik@gmail.com"><i class="fa fa-envelope fa-2x" aria-hidden="true"></i></a>
+                </li>
+
+                <li class="icon-li">
+                    <a href="tel:0481555555"><i class="fa fa-phone fa-2x" aria-hidden="true"></i></a>
+                </li>
+
+            </ul>
+        </section>
+        <section class="foot-txt"><p>Caringly crafted by Kriszta &copy 2022 </p></section>
+        
+    </footer> 
+</body>
+</html>

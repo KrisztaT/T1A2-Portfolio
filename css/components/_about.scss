@@ -1,0 +1,211 @@
+/* Main content styling for about.html */
+.main-about{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+   
+  /* Short introduction component with headline, picture, textual information and a resume button styled for mobile and tablet view */
+  .about-left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 90%;
+        
+    .headline{
+      @include m_headline();
+    }
+     
+    .me-photo{
+      padding: 40px 0;
+      width: 200px;
+    }
+        
+    p{
+      @include m-reg-txt();
+      margin: 20px 20px;
+    }
+      
+    .resume-btn{
+      @include buttons();
+  
+        &:hover{
+        @include button-hover();
+        }
+    }
+  }
+  
+  /* vertical timeline component style for desktop view about education */
+  .vertical-timeline{
+    box-shadow:0px 0px 10px rgba(0, 0, 0, 0.5);
+    padding:30px 5px 30px 10px;
+    width: 90%;
+    margin-top: 20px;
+      
+    .timeline-title{
+      @include m_headline();
+    }
+        
+    .timeline {
+      border-left:2px solid $clr-accent-2;
+      padding: 20px 20px;
+          
+      .li-school{
+        padding:10px 10px;
+        position:relative;
+        cursor:pointer;
+        transition:.5s;
+            
+          &:hover{
+            background-color:$clr-cards;
+          }  
+  
+          &::before{
+            position:absolute;
+            content:'';
+            width:15px;
+            height:15px;
+            background-color:$clr-accent-2;
+            border-radius:50%;
+            left:-28px;
+            top:15px;
+            transition:.5s;
+          }
+  
+            &:hover:before{
+              background-color: $clr-accent-3;
+              box-shadow:0px 0px 10px 2px $clr-accent-3;
+            }
+  
+            .date{
+              font-size: $fs-m-reg;
+              font-weight: $fw-bold;
+            }
+
+            .school{
+              color: $clr-accent-1;
+              font-size: $fs-m-nav;
+            }
+
+            .title{
+              color: $clr-accent-2;
+            }
+
+            p{
+              font-size: $fs-m-reg;
+            }
+        }
+    }
+  }
+  
+  /*skill bar component style for mobile view */
+  .skill-bar{
+    width:90%;
+    position:relative;
+    float:left;
+    margin-top: 20px;
+    box-shadow:0px 0px 10px rgba(0, 0, 0, 0.5);
+    padding:20px 10px 20px 10px;
+  
+    .skill-title{
+      @include m_headline();
+      }
+      
+      .my-skills { 
+        padding-top:30px;
+        & > li { 
+          margin-bottom:50px; 
+          background: $clr-general-txt; 
+          height:6px;
+
+          & em {
+            font-size: $fs-m-reg;
+            position:relative; 
+            top:-30px;
+          }
+
+          & span { 
+            height: inherit;
+            background-color: $clr-accent-1;
+            background: linear-gradient(90deg, $clr-accent-1, $clr-accent-2);
+            position:absolute;
+          }
+        }
+      }
+    
+      .html5 { 
+        width:50%;  
+      }
+      .css3 { 
+        width:45%;
+      }
+      .python{
+        width:45%;
+      }
+      .js { 
+        width:50%;  
+      }
+      .figma{
+        width:45%;
+      }
+  }
+  
+  /* hobby card component styling with animation */
+  .hobby-card{
+    box-shadow:0px 0px 10px rgba(0, 0, 0, 0.5);
+    padding:30px 10px 30px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+      .slider-title{
+        @include m_headline();
+      }
+  
+      .hobby-pics{
+        width: 20rem;
+        height: 20rem;
+        background-image: url(../img/lily.jpg);
+        background-position: center center;
+        border-radius: 50%;
+        box-shadow: 0 0 20 20px $clr-accent-1;
+        animation: slider 15s linear infinite;
+        margin: 20px 20px;
+      }
+  } 
+}
+
+  @keyframes slider{
+    0% {
+      background: url(../img/lily.jpg);
+      background-size: cover;
+      background-position: center center;
+    }
+  
+    25% {
+      background: url(../img/reading.png);
+      background-size: cover;
+      background-position: center center;
+    }
+  
+    50% {
+      background: url(../img/sewing.png);
+      background-size: cover;
+      background-position: center center;
+    }
+    75% {
+      background: url(../img/friends.png);
+      background-size: cover;
+      background-position: center center;
+    }
+    100% {
+      background: url(../img/travel.png);
+      background-size: cover;
+      background-position: center center;
+    }
+  }
