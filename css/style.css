@@ -262,7 +262,7 @@ select {
   color: #049CE4;
 }
 .main-index .main-btn {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: #02C9AF;
   text-align: center;
@@ -391,7 +391,7 @@ select {
   font-size: 1.25rem;
 }
 .main-about .about-left .resume-btn {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: #02C9AF;
   text-align: center;
@@ -642,7 +642,7 @@ select {
 }
 .main-contact .contact-form ul li input[type=button] {
   margin: 36px 0;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: #02C9AF;
   text-align: center;
@@ -708,7 +708,7 @@ select {
 }
 .main-blog .blog .blog-card .blog-title {
   color: #02C9AF;
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   padding: 10px 0;
   text-align: center;
   text-decoration: none;
@@ -724,7 +724,7 @@ select {
   font-weight: 700;
 }
 .main-blog .blog .blog-card .blog-btn {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: #02C9AF;
   text-align: center;
@@ -764,7 +764,7 @@ select {
 }
 .main-blog-posts .blog-posts .blog-post .blog-title {
   color: #02C9AF;
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   padding: 10px 0;
   text-align: center;
   text-decoration: none;
@@ -781,7 +781,7 @@ select {
   margin: 50px 16px;
 }
 .main-blog-posts .blog-posts .blog-post .back-btn {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: #02C9AF;
   text-align: center;
@@ -1021,7 +1021,7 @@ creating with mobile first view */
     margin: 50px 16px;
   }
   .main-blog-posts .blog-posts .blog-post .back-btn {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 700;
     color: #02C9AF;
     text-align: center;
