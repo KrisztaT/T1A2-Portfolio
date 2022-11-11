@@ -386,6 +386,10 @@ select {
   margin: 20px 10px;
   margin: 20px 20px;
 }
+.main-about .about-left p .full-name {
+  color: #02C9AF;
+  font-size: 1.25rem;
+}
 .main-about .about-left .resume-btn {
   font-size: 1.5rem;
   font-weight: 700;
@@ -741,7 +745,7 @@ select {
   /* blog posts component style for mobile and tablet view */
 }
 .main-blog-posts .blog-posts {
-  width: 80vw;
+  width: 90vw;
   display: flex;
   flex-wrap: wrap;
   align-items: center;

@@ -25,6 +25,11 @@
     p{
       @include m-reg-txt();
       margin: 20px 20px;
+       
+      .full-name{
+        color: $clr-accent-1;
+        font-size: $fs-m-nav;
+      }
     }
       
     .resume-btn{

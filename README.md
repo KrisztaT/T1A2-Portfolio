@@ -13,9 +13,10 @@ Tech stack (e.g. html, css, deployment platform, etc)
 -->
 # Portfolio Website
 
-[Portfolio website](https://)  
-[GitHub](https://github.com/KrisztaT/portfolio)  
-[Video Link](https://youtube.com)
+[Portfolio website](https://krisztinatesenyi.netlify.app/)  
+[GitHub](https://github.com/KrisztaT/T1A2-Portfolio)  
+[Wireframe](https://www.figma.com/file/94cRTcMIv2mB19LTEPbNKA/Portfolio?node-id=36%3A27)  
+[Video Link](https://youtu.be/m8EX8egulU4)
 
 ## Purpose of the website
 
@@ -36,10 +37,10 @@ This portfolio website was built with:
 
 * SASS-SCSS only.
 
-**Wireframe** design: _Figma_  
+**Wireframe** design: _Figma_
 **Sitemap**: _FigJam_  
 **Code tracking**: _Git_  
-**Online Git Repository**: _GitHub_ -[GitHub Repository Link](https://github.com/KrisztaT/portfolio)  
+**Online Git Repository**: _GitHub_  
 **README**: Markdown
 
 ## Functionality/Features
@@ -106,17 +107,11 @@ The index.html page is the landing/home page of the portfolio website, where I s
 
 * The contact me button is anchored to the contact.html page.
 
-<br>
-
 #### Index desktop view
-
-<br>
 
 ![Index desktop](./img/md/desktop-index.png)
 
 #### Index tablet and mobile view  
-
-<br>
 
 ![Index desktop](./img/md/mobile-tablet-index.png)
 
@@ -136,13 +131,9 @@ The about page's purpose is to provide information about who I am, my education,
 
 #### About me desktop view
 
-<br>
-
 ![About me desktop](./img/md/desktop-about-me.png)
 
 #### About me tablet and mobile view
-
-<br>
 
 ![About me mobile-tablet](./img/md/mobile-tablet-about-me.png)
 
@@ -158,13 +149,9 @@ The contact page’s purpose is to allow the user to send a message and inform t
 
 #### Contact me desktop view
 
-<br>
-
 ![Contact me desktop](./img/md/desktop-contact.png)
 
 #### Contact me tablet and mobile view
-
-<br>
 
 ![Contact me mobile-tablet](./img/md/mobile-tablet-contact.png)
 
@@ -182,13 +169,9 @@ The blog.html page lists all the blog posts I wrote about my dog, Minnie.
 
 #### Blog desktop view
 
-<br>
-
 ![Blog desktop](./img/md/desktop-blog.png)
 
 #### Blog tablet and mobile view
-
-<br>
 
 ![Blog mobile-tablet](./img/md/mobile-tablet-blog.png)
 
@@ -204,13 +187,9 @@ The blog-posts.html features all the blog posts I wrote about Minnie, my retired
 
 #### Blog posts desktop view
 
-<br>
-
 ![Blog desktop](./img/md/desktop-blog-posts.png)
 
 #### Blog posts tablet and mobile view
-
-<br>
 
 ![Blog mobile-tablet](./img/md/mobile-tablet-blog-posts.png)
 
